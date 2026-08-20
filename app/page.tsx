@@ -44,7 +44,7 @@ export default function Home() {
   const [isEditingSettings, setIsEditingSettings] = useState(false);
 
   const [name, setName] = useState('');
-  const [level, setLevel] = useState('7級');
+  const [level, setLevel] = useState('4級'); // 預設 4 級
   const [selectedHours, setSelectedHours] = useState<string[]>([]);
   const [players, setPlayers] = useState<Player[]>([]);
   const [myRegistrationIds, setMyRegistrationIds] = useState<string[]>([]);
@@ -626,34 +626,26 @@ export default function Home() {
           </div>
         </div>
 
-        {/* 🏆 18 級羽球程度選擇區 */}
+        {/* 🏆 TBDA 10 級羽球程度選擇區 */}
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">
-            羽球程度 (1 - 18 級)
+            羽球程度 (1 - 10 級)
           </label>
           <select
             value={level}
             onChange={(e) => setLevel(e.target.value)}
             className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-slate-800 bg-white text-xs"
           >
-            <option value="1級">1級 - 新手 (剛接觸，懂得比賽禮儀)</option>
-            <option value="2級">2級 - 新手 (球齡&lt;1年，中場來回10拍)</option>
-            <option value="3級">3級 - 新手 (定點擊球至中後場)</option>
-            <option value="4級">4級 - 初階 (球齡1-3年，長球/平推)</option>
-            <option value="5級">5級 - 初階 (懂基本腳步、非受迫球路)</option>
-            <option value="6級">6級 - 初中階 (球齡3-5年，懂基本輪轉)</option>
-            <option value="7級">7級 - 初中階 (殺/切/長球成功率七成)</option>
-            <option value="8級">8級 - 中階 (球齡5-10年，熟悉輪轉戰略)</option>
-            <option value="9級">9級 - 中階 (球路發力強、高準確度)</option>
-            <option value="10級">10級 - 中進階 (球齡&gt;10年，靈活戰略)</option>
-            <option value="11級">11級 - 中進階 (反拍各種球路，具威脅性)</option>
-            <option value="12級">12級 - 中進階 (高速度移位、高強度侵略)</option>
-            <option value="13級">13級 - 高階 (校隊前段/體保/社會甲組)</option>
-            <option value="14級">14級 - 高階 (穩定熟練、防守無死角)</option>
-            <option value="15級">15級 - 高階 (球速快、戰略組織上等)</option>
-            <option value="16級">16級 - 職業級 (甲組/國家代表選手)</option>
-            <option value="17級">17級 - 職業級 (戰術步法爐火純青)</option>
-            <option value="18級">18級 - 職業級 (個人獨特球路風格)</option>
+            <option value="1級">1級 - 初學入門 (握拍擊球不穩，以過網為主)</option>
+            <option value="2級">2級 - 基礎建立 (基本擊球穩定，可簡單對打)</option>
+            <option value="3級">3級 - 穩定對打 (主動球路有雛形，多拍回合)</option>
+            <option value="4級">4級 - 初階進步 (步伐開始成型，能打後場球)</option>
+            <option value="5級">5級 - 地方入門 (具戰術意識，能運用吊殺推擋)</option>
+            <option value="6級">6級 - 地區穩定 (控球節奏明顯，攻防轉換穩定)</option>
+            <option value="7級">7級 - 高階業餘 (攻防轉換快速，掌握節奏落點)</option>
+            <option value="8級">8級 - 準競技 (接近選手訓練水準，體能佳)</option>
+            <option value="9級">9級 - 選手 (系統化訓練，大專校隊主力)</option>
+            <option value="10級">10級 - 競技選手 (校隊前段/全大運八強/全國級)</option>
           </select>
         </div>
 
